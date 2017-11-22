@@ -21,7 +21,8 @@ To see imputation performances of FMR models, clustering tasks:
 run demo_LSOAII_FMR_by_Task_clustering.m
 or demo_easySHARE_FMR_by_Task_clustering.m
 
-To see feature-based prediction performances of MOE models, run similar .m files in data/train_and_results_MOE
+To see feature-based prediction performances of MOE models, run similar .m files in data/train_and_results_MOE. 
+File names differentiate on the keyword "FMR" and "MOE".
 
 To see concordant scores of tasks:
 open folder detect_anomaly_tasks
