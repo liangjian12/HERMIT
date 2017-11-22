@@ -1,0 +1,45 @@
+This data is a simplified data set from the Survey of Heath, Aging, and Retirement
+in Europe (SHARE), see http://www.share-project.org/data-access-documentation.html. 
+SHARE includes multidisciplinary and cross-national panel databases
+on health, socio-economic status, and social and family networks of more than 85,000
+individuals from 20 European countries aged 50 or over. Four waves of interviews were
+conducted during 2004 - 2011, and are referred to as WAVE 1 to WAVE 4 interviews. We 
+use WAVE 1 and WAVE 2, which includes 20,449 sample persons and 15 targets (among which 
+11 are binary, and 4 are continuous), and totally 75 features are constructed from WAVE 1 interview.
+
+The features cover a wide range of assessments, including demographics, household composition, 
+social support and network, physical health, mental health, behavior risk, healthcare, occupation 
+and income. Detailed description features are not listed in this paper.
+
+Both targets and features have missing values due to non-response and questionnaire filtering. 
+The average missing value rates in targets and features are 6.9% and 5.1%, respectively. The same 
+pre-processing procedure as that for LSOA II Data has been adopted and results in totally d=118 features.
+
+We randomly select 10% of the samples for training, 10% for validation and the rest for testing.
+
+
+
+Variables in data_processed_easySHARE.mat:
+
+train_X: X for training
+train_Y: Y for training
+valid_X: X for validation
+valid_Y: Y for validation
+test_X:  X for testing
+test_Y:  Y for testing
+
+train_Omega: observed entries of training targets
+valid_Omega: observed entries of validation targets
+test_Omega:  observed entries of testing targets
+
+task_type: type of each task, e.g., 1: Gaussian task, 2: Bernoulli task, 3: Poisson task
+task_num_each_type: number of tasks for each type, e.g., [4,11,0] means 4 Gaussian tasks, 11 Bernoulli tasks, 0 Poisson tasks.
+
+
+Variables in feature_description_easySHARE.mat
+feature_description: description of 118 features. The first feature is bias and named 'NULL'. 'IS MISSING' means that the feature with the name afterwards is missing.
+
+Variables in task_description_easySHARE.mat
+task_description: description of 15 tasks. 
+
+
