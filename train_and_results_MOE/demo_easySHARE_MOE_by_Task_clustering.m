@@ -2,7 +2,7 @@ clc;clear;close all
 %% super parameter
 rng(0);
 parfor_flag = 1; %1: use 'parfor' command to tune hyper-parameters parallel; 0: do not tune hyper-parameters parallel
-rep_num = 100; %the number of replications to report results
+rep_num = 500; %the number of replications to report results
 param_num = 40; %the number of parameters to tune
 tune_num = 1; %the number of replications to tune each setting of hyper-parameter
 param_start = 0; %logarithm of the first hyper-parameter to tune
