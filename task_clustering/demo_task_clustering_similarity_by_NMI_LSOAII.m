@@ -211,15 +211,7 @@ opts_save.k=1; %tuning hyper-parameter using pre-fixed k = 1
 opts_save.k,opts_save,prox_param_save,param_range{1},solver_cv,@scorer_without_Z_real_int_complete_cv_MAR,m,parfor_flag,tune_num,th);    
 
  
-disp('tuning k, the number of clusters')
- 
-if ~flag_use_pre_tuned_best_k
-    [best_k,score] = decide_k(train_X,train_Y,valid_X,valid_Y,train_Omega,valid_Omega_c,valid_Omega_b,...
-        opts_save,prox_param_save,solver,@scorer_without_Z_real_int_complete_cv,500,best_param,j_method,1);   
-else %use pre-tuned k
-    load(sprintf('tuned_best_k_data_%s_using_all_the_tasks.mat',data_keyword{i_data}));
-    best_k = record_tuned_best_k(i_group);
-end
+best_k =20;
  
 disp('best regularization parameters:')
 disp(log10(best_param{1}))
